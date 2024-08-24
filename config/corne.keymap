@@ -8,6 +8,7 @@
 #define SYM     2
 #define FUNC    3
 #define NAV     4
+#define HUN     5
 
 / {
     keymap {
@@ -15,19 +16,19 @@
 
         default_layer {
             bindings = <
-                &none &kp      Q &kp      W &kp       E &kp         R &kp T                         &kp Y        &kp        U &kp       I &kp      O &kp      P    &none
-                &none &mt LWIN A &mt LALT S &mt LCTRL D &mt LSHFT   F &kp G                         &kp H        &mt LSHIFT J &mt LCTRL K &mt LALT L &mt LWIN SEMI &none
-                &none &kp      Z &kp      X &kp       C &kp         V &kp B                         &kp N        &kp        M &kp COMMA   &kp DOT    &kp FSLH      &none
-                                            &lt NUM ESC &lt NAV SPACE &lt SYM TAB                   &lt FUNC RET &kp BSPC     &kp DEL
+                &none &kp      Q &kp      W &kp       E &kp         R &kp T                         &kp Y        &kp        U &kp       I  &kp      O    &kp                 P &none
+                &none &mt LWIN A &mt LALT S &mt LCTRL D &mt LSHFT   F &kp G                         &kp H        &mt LSHIFT J &mt LCTRL K  &mt LALT L    &mt LWIN HU_BACKSLASH &none
+                &none &kp      Z &kp      X &kp       C &kp         V &kp B                         &kp N        &kp        M &kp HU_COMMA &kp HU_PERIOD &kp HU_MINUS          &none
+                                            &lt HUN ESC &lt NAV SPACE &lt SYM TAB                   &lt FUNC RET &lt NUM BSPC &kp DEL
             >;
         };
 
         num_layer {
             bindings = <
-                &none &trans &trans &trans &trans &trans                                            &kp KP_DIVIDE   &kp N7 &kp N8 &kp N9 &kp KP_MINUS &none
-                &none &trans &trans &trans &trans &trans                                            &kp KP_MULTIPLY &kp N4 &kp N5 &kp N6 &kp KP_PLUS  &none
-                &none &trans &trans &trans &trans &trans                                            &kp N0          &kp N1 &kp N2 &kp N3 &kp KP_DOT   &none
-                                    &trans &trans &trans                                            &trans          &trans &trans
+                &none &kp KP_DIVIDE   &kp HU_N7 &kp HU_N8 &kp HU_N9 &kp KP_MINUS                    &trans &trans &trans &trans &trans &none
+                &none &kp KP_MULTIPLY &kp HU_N4 &kp HU_N5 &kp HU_N6 &kp KP_PLUS                     &trans &trans &trans &trans &trans &none
+                &none &kp HU_N0       &kp HU_N1 &kp HU_N2 &kp HU_N3 &kp KP_DOT                      &trans &trans &trans &trans &trans &none
+                                             &trans &trans &trans                                   &trans &trans &trans
             >;
         };
 
@@ -55,6 +56,15 @@
                 &none &trans &trans &trans &trans &trans                                            &trans &kp LEFT &kp DOWN        &kp UP    &kp RIGHT &none
                 &none &trans &trans &trans &trans &trans                                            &trans &trans   &kp PAUSE_BREAK &kp INS   &trans    &none
                                     &trans &trans &trans                                            &trans &trans   &trans
+            >;
+        };
+
+        hun_layer {
+            bindings = <
+                &none &trans &trans &trans &trans &trans                                            &trans &HU_O_UMLAUT &HU_U_UMLAUT       &HU_O_ACUTE        &trans &none
+                &none &trans &trans &trans &trans &trans                                            &trans &HU_I_ACUTE  &HU_O_DOUBLE_ACUTE &HU_U_ACUTE        &trans &none
+                &none &trans &trans &trans &trans &trans                                            &trans &HU_E_ACUTE  &HU_A_ACUTE        &HU_U_DOUBLE_ACUTE &trans &none
+                                    &trans &trans &trans                                            &trans &trans &trans
             >;
         };
     };
