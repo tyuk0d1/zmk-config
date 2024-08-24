@@ -61,9 +61,9 @@
 
         hun_layer {
             bindings = <
-                &none &trans &trans &trans &trans &trans                                            &trans &HU_O_UMLAUT &HU_U_UMLAUT       &HU_O_ACUTE        &trans &none
-                &none &trans &trans &trans &trans &trans                                            &trans &HU_I_ACUTE  &HU_O_DOUBLE_ACUTE &HU_U_ACUTE        &trans &none
-                &none &trans &trans &trans &trans &trans                                            &trans &HU_E_ACUTE  &HU_A_ACUTE        &HU_U_DOUBLE_ACUTE &trans &none
+                &none &trans &trans &trans &trans &trans                                            &trans &kp HU_O_UMLAUT &kp HU_U_UMLAUT       &kp HU_O_ACUTE        &trans &none
+                &none &trans &trans &trans &trans &trans                                            &trans &kp HU_I_ACUTE  &kp HU_O_DOUBLE_ACUTE &kp HU_U_ACUTE        &trans &none
+                &none &trans &trans &trans &trans &trans                                            &trans &Hkp U_E_ACUTE  &kp HU_A_ACUTE        &kp HU_U_DOUBLE_ACUTE &trans &none
                                     &trans &trans &trans                                            &trans &trans &trans
             >;
         };
