@@ -12,7 +12,12 @@
 #define MACRO   6
 
 / {
-    macros {                
+    macros {
+        ZMK_MACRO(
+            macro_user,
+            bindings =
+                <&kp A &kp D &kp HU_N0 &kp HU_N0 &kp HU_N5 &kp HU_BACKSLASH &kp HU_Z &kp HU_N0 &kp HU_N0 &kp HU_N1 &kp T &kp X &kp N &kp J>;
+        )
         ZMK_MACRO(
             macro_pwd,
             bindings =
