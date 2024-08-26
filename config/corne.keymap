@@ -13,6 +13,17 @@
 
 / {
     macros {
+        ZMK_MACRO(
+            macro_pwd,
+            wait-ms = <30>;
+            tap-ms = <40>;
+            bindings =
+                <&kp L &kp I &kp T &kp L &kp E &kp N1>,
+                <&macro_press &kp LSHFT>,
+                <&kp W &kp I &kp N &kp G>,
+                <&macro_release &kp LSHFT>,
+                <&kp HU_MINUS>;
+        ) 
     };
 
     keymap {
@@ -74,9 +85,9 @@
 
         macro_layer {
             bindings = <
-                &none &trans &trans &trans &trans &trans                                            &trans &trans &trans &trans &trans &none
-                &none &trans &trans &trans &trans &trans                                            &trans &trans &trans &trans &trans &none
-                &none &trans &trans &trans &trans &trans                                            &trans &trans &trans &trans &trans &none
+                &none &trans &trans &trans &trans &trans                                            &trans &trans &trans &trans &macro_pwd &none
+                &none &trans &trans &trans &trans &trans                                            &trans &trans &trans &trans &trans     &none
+                &none &trans &trans &trans &trans &trans                                            &trans &trans &trans &trans &trans     &none
                                     &trans &trans &trans                                            &trans &trans &trans
             >;
         };
