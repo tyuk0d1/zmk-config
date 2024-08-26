@@ -34,10 +34,10 @@
 
         sym_layer {
             bindings = <
-                &none &trans &trans &trans &trans &trans                                            &trans &kp GRAVE &kp MINUS &kp EQUAL &trans   &none
-                &none &trans &trans &trans &trans &trans                                            &trans &kp APOS  &kp LBKT  &kp RBKT  &kp BSLH &none
-                &none &trans &trans &trans &trans &trans                                            &trans &trans    &kp LPAR  &kp RPAR  &trans   &none
-                                    &trans &trans &trans                                            &trans &trans    &trans
+                &none &trans &trans &trans &trans &trans                                            &trans &kp HU_PIPE &kp HU_LBKT &kp HU_RBKT &kp HU_EURO   &none
+                &none &trans &trans &trans &trans &trans                                            &trans &kp HU_HASH &kp HU_LBRC &kp HU_RBRC &kp HU_DOLLAR &none
+                &none &trans &trans &trans &trans &trans                                            &trans &kp HU_AMPS &kp HU_LT   &kp HU_GT   &kp HU_AT     &none
+                                    &trans &trans &trans                                            &trans &trans      &trans
             >;
         };
 
