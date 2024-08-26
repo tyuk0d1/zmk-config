@@ -32,6 +32,11 @@
             bindings =
                 <&kp HU_Z &kp O &kp L &kp T &kp A &kp N &kp HU_DOT &kp T &kp HU_Y &kp U &kp K &kp O &kp D &kp I &kp HU_DOT &kp E &kp X &kp T &kp HU_AT &kp S &kp I &kp E &kp M &kp E &kp N &kp S &kp HU_MINUS &kp H &kp E &kp A &kp L &kp T &kp H &kp I &kp N &kp E &kp E &kp R &kp S &kp HU_DOT &kp C &kp O &kp M>;
         )
+        ZMK_MACRO(
+            macro_syngo,
+            bindings =
+                <&kp A &kp  &kp D &kp M &kp HU_DOLLAR &kp P &kp W &kp D &kp HU_DOLLAR &kp HU_N4 &kp HU_DOLLAR &kp M &kp E &kp D>;
+        )
     };
 
     keymap {
@@ -93,9 +98,9 @@
 
         macro_layer {
             bindings = <
-                &none &trans &trans       &trans &trans &trans                                            &trans &trans      &trans &trans &macro_pwd &none
-                &none &trans &trans       &trans &trans &trans                                            &trans &trans      &trans &trans &trans     &none
-                &none &trans &trans       &trans &trans &trans                                            &trans &trans      &trans &trans &trans     &none
+                &none &trans &trans       &trans &trans &trans                                            &trans &macro_user &trans &trans &macro_pwd &none
+                &none &trans &macro_syngo &trans &trans &trans                                            &trans &trans      &trans &trans &trans     &none
+                &none &trans &trans       &trans &trans &trans                                            &trans &macro_mail &trans &trans &trans     &none
                                           &trans &trans &trans                                            &trans &trans      &trans
             >;
         };
