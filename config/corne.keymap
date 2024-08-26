@@ -12,12 +12,7 @@
 #define MACRO   6
 
 / {
-    macros {
-        ZMK_MACRO(
-            macro_user,
-            bindings =
-                <&kp A &kp D &kp HU_N0 &kp HU_N0 &kp HU_N5 &kp HU_BACKSLASH &kp HU_Z &kp HU_N0 &kp HU_N0 &kp HU_N1 &kp T &kp X &kp N &kp J>;
-        )        
+    macros {                
         ZMK_MACRO(
             macro_pwd,
             bindings =
@@ -26,16 +21,6 @@
                 <&macro_tap &kp W &kp I &kp N &kp G>,
                 <&macro_release &kp LSHFT>,
                 <&macro_tap &kp HU_MINUS>;
-        )
-        ZMK_MACRO(
-            macro_mail,
-            bindings =
-                <&kp HU_Z &kp O &kp L &kp T &kp A &kp N &kp HU_DOT &kp T &kp HU_Y &kp U &kp K &kp O &kp D &kp I &kp HU_DOT &kp E &kp X &kp T &kp HU_AT &kp S &kp I &kp E &kp M &kp E &kp N &kp S &kp HU_MINUS &kp H &kp E &kp A &kp L &kp T &kp H &kp I &kp N &kp E &kp E &kp R &kp S &kp HU_DOT &kp C &kp O &kp M>;
-        )
-        ZMK_MACRO(
-            macro_syngo,
-            bindings =
-                <&kp A &kp  &kp D &kp M &kp HU_DOLLAR &kp P &kp W &kp D &kp HU_DOLLAR &kp 4 &kp HU_DOLLAR &kp M &kp E &kp D>;
         )
     };
 
