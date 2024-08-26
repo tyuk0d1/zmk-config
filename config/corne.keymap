@@ -15,6 +15,8 @@
     macros {
         ZMK_MACRO(
             macro_pwd,
+            wait-ms = <40>;
+            tap-ms = <40>;
             bindings =
                 <&kp L &kp I &kp T &kp L &kp E &kp HU_N0 &kp HU_N8>,
                 <&macro_press &kp LSHFT>,
