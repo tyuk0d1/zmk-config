@@ -35,7 +35,7 @@
         ZMK_MACRO(
             macro_syngo,
             bindings =
-                <&kp A &kp  &kp D &kp M &kp HU_DOLLAR &kp P &kp W &kp D &kp HU_DOLLAR &kp HU_N4 &kp HU_DOLLAR &kp M &kp E &kp D>;
+                <&kp A &kp D &kp M &kp HU_DOLLAR &kp P &kp W &kp D &kp HU_DOLLAR &kp HU_N4 &kp HU_DOLLAR &kp M &kp E &kp D>;
         )
     };
 
