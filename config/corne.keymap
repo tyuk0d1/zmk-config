@@ -98,7 +98,7 @@
         sym_layer {
             bindings = <
                 &none &trans &trans &trans &trans &trans                                            &kp HU_AMPS &kp HU_PIPE &kp HU_LBKT &kp HU_RBKT &kp HU_EURO   &none
-                &none &trans &trans &trans &trans &trans                                            &SLASH      &kp HU_SEMI &kp HU_LBRC &kp HU_RBRC &kp HU_DOLLAR &none
+                &none &trans &trans &trans &trans &trans                                            &kp SLASH   &kp HU_SEMI &kp HU_LBRC &kp HU_RBRC &kp HU_DOLLAR &none
                 &none &trans &trans &trans &trans &trans                                            &trans      &kp HU_HASH &kp HU_LT   &kp HU_GT   &kp HU_AT     &none
                                     &trans &trans &trans                                            &trans      &trans      &trans
             >;
