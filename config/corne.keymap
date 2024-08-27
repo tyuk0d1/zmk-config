@@ -13,6 +13,7 @@
 #define NAV      6
 #define HUN      7
 #define MACRO    8
+#define MACROX   9
 
 / {
     macros {
@@ -39,7 +40,21 @@
                 <&macro_tap &kp HU_MINUS>;
         )
         ZMK_MACRO(
+            macroX_pwd,
+            bindings =
+                <&macro_tap &kp K &kp O &kp K &kp I &kp R &kp I &kp HUX_N1>,
+                <&macro_press &kp LSHFT>,
+                <&macro_tap &kp F &kp O &kp R &kp E &kp S &kp T>,
+                <&macro_release &kp LSHFT>,
+                <&macro_tap &kp HUX_MINUS>;
+        )
+        ZMK_MACRO(
             macro_mail,
+            bindings =
+                <&kp T &kp HUX_Y &kp U &kp K &kp HUX_N0 &kp D &kp HUX_N1 &kp HUX_AT &kp I &kp C &kp L &kp O &kp U &kp D &kp HUX_DOT &kp C &kp O &kp M>;
+        )
+        ZMK_MACRO(
+            macroX_mail,
             bindings =
                 <&kp HU_Z &kp O &kp L &kp T &kp A &kp N &kp HU_DOT &kp T &kp HU_Y &kp U &kp K &kp O &kp D &kp I &kp HU_DOT &kp E &kp X &kp T &kp HU_AT &kp S &kp I &kp E &kp M &kp E &kp N &kp S &kp HU_MINUS &kp H &kp E &kp A &kp L &kp T &kp H &kp I &kp N &kp E &kp E &kp R &kp S &kp HU_DOT &kp C &kp O &kp M>;
         )
@@ -55,8 +70,8 @@
 
         default_layer {
             bindings = <
-                &none &kp      Q &kp      W &kp       E &kp         R &kp       T                   &kp Y        &kp        U &kp       I  &kp      O    &kp                 P &none
-                &none &mt LWIN A &mt LALT S &mt LCTRL D &mt LSHFT   F &kp       G                   &kp H        &mt LSHIFT J &mt LCTRL K  &mt LALT L    &mt LWIN HU_BACKSLASH &none
+                &none &kp      Q &kp      W &kp       E &kp         R &kp       T                   &kp Y        &kp        U &kp        I &kp      O    &kp                 P &none
+                &none &mt LWIN A &mt LALT S &mt LCTRL D &mt LSHFT   F &kp       G                   &kp H        &mt LSHIFT J &mt LCTRL  K &mt LALT L    &mt LWIN HU_BACKSLASH &none
                 &none &kp      Z &kp      X &kp       C &kp         V &kp       B                   &kp N        &kp        M &kp HU_COMMA &kp HU_PERIOD &kp HU_MINUS          &none
                                             &lt HUN ESC &lt NAV SPACE &lt SYM TAB                   &lt FUNC RET &lt NUM BSPC &lt MACRO DEL
             >;
@@ -64,10 +79,10 @@
 
         defaultX_layer {
             bindings = <
-                &none &kp       Q &kp      W &kp      E &kp         R &kp        T                  &kp       Y  &kp        U &kp       I  &kp      O    &kp                  P &none
-                &none &mt LCTRL A &mt LALT S &mt LCMD D &mt LSHFT   F &mt GLOBE  G                  &mt GLOBE H  &mt LSHIFT J &mt LCMD  K  &mt LALT L    &mt LCTRL HU_BACKSLASH &none
+                &none &kp       Q &kp      W &kp      E &kp         R &kp        T                  &kp       Y  &kp        U &kp        I &kp      O    &kp                  P &none
+                &none &mt LCTRL A &mt LALT S &mt LCMD D &mt LSHFT   F &mt GLOBE  G                  &mt GLOBE H  &mt LSHIFT J &mt LCMD   K &mt LALT L    &mt LCTRL HU_BACKSLASH &none
                 &none &kp       Z &kp      X &kp      C &kp         V &kp        B                  &kp       N  &kp        M &kp HU_COMMA &kp HU_PERIOD &kp HU_MINUS           &none
-                                            &lt HUN ESC &lt NAV SPACE &lt SYMX TAB                  &lt FUNC RET &lt NUM BSPC &lt MACRO DEL
+                                            &lt HUN ESC &lt NAV SPACE &lt SYMX TAB                  &lt FUNC RET &lt NUM BSPC &lt MACROX DEL
             >;
         };
 
@@ -131,6 +146,15 @@
                 &none &trans &macro_syngo &trans &trans &trans                                       &trans &trans      &trans &trans &trans     &none
                 &none &trans &trans       &trans &trans &trans                                       &trans &macro_mail &trans &trans &trans     &none
                                           &trans &trans &trans                                       &trans &trans      &trans
+            >;
+        };
+
+        macroX_layer {
+            bindings = <
+                &none &trans &trans &trans &trans &trans                                             &trans &trans       &trans &trans &macroX_pwd &none
+                &none &trans &trans &trans &trans &trans                                             &trans &trans       &trans &trans &trans      &none
+                &none &trans &trans &trans &trans &trans                                             &trans &macroX_mail &trans &trans &trans      &none
+                                    &trans &trans &trans                                             &trans &trans       &trans
             >;
         };
     };
