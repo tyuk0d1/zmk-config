@@ -51,12 +51,12 @@
         ZMK_MACRO(
             macro_mail,
             bindings =
-                <&kp T &kp HUX_Y &kp U &kp K &kp HUX_N0 &kp D &kp HUX_N1 &kp HUX_AT &kp I &kp C &kp L &kp O &kp U &kp D &kp HUX_DOT &kp C &kp O &kp M>;
+                <&kp HU_Z &kp O &kp L &kp T &kp A &kp N &kp HU_DOT &kp T &kp HU_Y &kp U &kp K &kp O &kp D &kp I &kp HU_DOT &kp E &kp X &kp T &kp HU_AT &kp S &kp I &kp E &kp M &kp E &kp N &kp S &kp HU_MINUS &kp H &kp E &kp A &kp L &kp T &kp H &kp I &kp N &kp E &kp E &kp R &kp S &kp HU_DOT &kp C &kp O &kp M>;
         )
         ZMK_MACRO(
             macroX_mail,
             bindings =
-                <&kp HU_Z &kp O &kp L &kp T &kp A &kp N &kp HU_DOT &kp T &kp HU_Y &kp U &kp K &kp O &kp D &kp I &kp HU_DOT &kp E &kp X &kp T &kp HU_AT &kp S &kp I &kp E &kp M &kp E &kp N &kp S &kp HU_MINUS &kp H &kp E &kp A &kp L &kp T &kp H &kp I &kp N &kp E &kp E &kp R &kp S &kp HU_DOT &kp C &kp O &kp M>;
+                <&kp T &kp HUX_Y &kp U &kp K &kp HUX_N0 &kp D &kp HUX_N1 &kp HUX_AT &kp I &kp C &kp L &kp O &kp U &kp D &kp HUX_DOT &kp C &kp O &kp M>;
         )
         ZMK_MACRO(
             macro_syngo,
@@ -79,9 +79,9 @@
 
         defaultX_layer {
             bindings = <
-                &none &kp       Q &kp      W &kp      E &kp         R &kp        T                  &kp       Y  &kp        U &kp        I &kp      O    &kp                  P &none
-                &none &mt LCTRL A &mt LALT S &mt LCMD D &mt LSHFT   F &mt GLOBE  G                  &mt GLOBE H  &mt LSHIFT J &mt LCMD   K &mt LALT L    &mt LCTRL HU_BACKSLASH &none
-                &none &kp       Z &kp      X &kp      C &kp         V &kp        B                  &kp       N  &kp        M &kp HU_COMMA &kp HU_PERIOD &kp HU_MINUS           &none
+                &none &kp       Q &kp      W &kp      E &kp         R &kp        T                  &kp       Y  &kp        U &kp        I &kp      O    &kp              P &none
+                &none &mt LCTRL A &mt LALT S &mt LCMD D &mt LSHFT   F &mt GLOBE  G                  &mt GLOBE H  &mt LSHIFT J &mt LCMD   K &mt LALT L    &mt LCTRL HUX_BSLH &none
+                &none &kp       Z &kp      X &kp      C &kp         V &kp        B                  &kp       N  &kp        M &kp HU_COMMA &kp HU_PERIOD &kp HU_MINUS       &none
                                             &lt HUN ESC &lt NAV SPACE &lt SYMX TAB                  &lt FUNC RET &lt NUM BSPC &lt MACROX DEL
             >;
         };
