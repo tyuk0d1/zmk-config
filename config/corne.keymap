@@ -4,13 +4,15 @@
 #include "keys_hu.h"
 #include "keys_hu_osx.h"
 
-#define DEFAULT 0
-#define NUM     1
-#define SYM     2
-#define FUNC    3
-#define NAV     4
-#define HUN     5
-#define MACRO   6
+#define DEFAULT  0
+#define DEFAULTX 1
+#define NUM      2
+#define SYM      3
+#define SYMX     4
+#define FUNC     5
+#define NAV      6
+#define HUN      7
+#define MACRO    8
 
 / {
     macros {
@@ -45,9 +47,18 @@
 
         default_layer {
             bindings = <
-                &none &kp      Q &kp      W &kp       E &kp         R &kp T                         &kp Y        &kp        U &kp       I  &kp      O    &kp                 P &none
-                &none &mt LWIN A &mt LALT S &mt LCTRL D &mt LSHFT   F &kp G                         &kp H        &mt LSHIFT J &mt LCTRL K  &mt LALT L    &mt LWIN HU_BACKSLASH &none
-                &none &kp      Z &kp      X &kp       C &kp         V &kp B                         &kp N        &kp        M &kp HU_COMMA &kp HU_PERIOD &kp HU_MINUS          &none
+                &none &kp      Q &kp      W &kp       E &kp         R &kp       T                   &kp Y        &kp        U &kp       I  &kp      O    &kp                 P &none
+                &none &mt LWIN A &mt LALT S &mt LCTRL D &mt LSHFT   F &kp       G                   &kp H        &mt LSHIFT J &mt LCTRL K  &mt LALT L    &mt LWIN HU_BACKSLASH &none
+                &none &kp      Z &kp      X &kp       C &kp         V &kp       B                   &kp N        &kp        M &kp HU_COMMA &kp HU_PERIOD &kp HU_MINUS          &none
+                                            &lt HUN ESC &lt NAV SPACE &lt SYM TAB                   &lt FUNC RET &lt NUM BSPC &lt MACRO DEL
+            >;
+        };
+
+        defaultX_layer {
+            bindings = <
+                &none &kp       Q &kp      W &kp      E &kp         R &kp       T                   &kp Y        &kp        U &kp       I  &kp      O    &kp                  P &none
+                &none &mt LCTRL A &mt LALT S &mt LCMD D &mt LSHFT   F &kp       G                   &kp H        &mt LSHIFT J &mt LCMD  K  &mt LALT L    &mt LCTRL HU_BACKSLASH &none
+                &none &kp       Z &kp      X &kp      C &kp         V &kp       B                   &kp N        &kp        M &kp HU_COMMA &kp HU_PERIOD &kp HU_MINUS           &none
                                             &lt HUN ESC &lt NAV SPACE &lt SYM TAB                   &lt FUNC RET &lt NUM BSPC &lt MACRO DEL
             >;
         };
@@ -67,6 +78,15 @@
                 &none &trans &trans &trans &trans &trans                                            &trans      &kp HU_SEMI &kp HU_LBRC &kp HU_RBRC &kp HU_DOLLAR &none
                 &none &trans &trans &trans &trans &trans                                            &trans      &kp HU_HASH &kp HU_LT   &kp HU_GT   &kp HU_AT     &none
                                     &trans &trans &trans                                            &trans      &trans      &trans
+            >;
+        };
+
+         symX_layer {
+            bindings = <
+                &none &trans &trans &trans &trans &trans                                            &kp HUX_AMPS &kp HUX_PIPE &kp HUX_LBKT &kp HUX_RBKT &kp HUX_EURO   &none
+                &none &trans &trans &trans &trans &trans                                            &trans       &kp HUX_SEMI &kp HUX_LBRC &kp HUX_RBRC &kp HUX_DOLLAR &none
+                &none &trans &trans &trans &trans &trans                                            &trans       &kp HUX_HASH &kp HUX_LT   &kp HUX_GT   &kp HUX_AT     &none
+                                    &trans &trans &trans                                            &trans       &trans       &trans
             >;
         };
 
@@ -99,10 +119,10 @@
 
         macro_layer {
             bindings = <
-                &none &trans &trans       &trans &trans &trans                                            &trans &macro_user &trans &trans &macro_pwd &none
-                &none &trans &macro_syngo &trans &trans &trans                                            &trans &trans      &trans &trans &trans     &none
-                &none &trans &trans       &trans &trans &trans                                            &trans &macro_mail &trans &trans &trans     &none
-                                          &trans &trans &trans                                            &trans &trans      &trans
+                &none &trans &trans       &trans &trans &trans                                       &trans &macro_user &trans &trans &macro_pwd &none
+                &none &trans &macro_syngo &trans &trans &trans                                       &trans &trans      &trans &trans &trans     &none
+                &none &trans &trans       &trans &trans &trans                                       &trans &macro_mail &trans &trans &trans     &none
+                                          &trans &trans &trans                                       &trans &trans      &trans
             >;
         };
     };
