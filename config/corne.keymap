@@ -108,7 +108,7 @@
             bindings = <
                 &none &trans &trans &trans &trans &trans                                            &kp HUX_AMPS  &kp HUX_PIPE &kp HUX_LBKT &kp HUX_RBKT &kp HUX_EURO   &none
                 &none &trans &trans &trans &trans &trans                                            &kp HUX_SLASH &kp HUX_SEMI &kp HUX_LBRC &kp HUX_RBRC &kp HUX_DOLLAR &none
-                &none &trans &trans &trans &trans &trans                                            &trans        &kp HUX_HASH &kp HUX_LT   &kp HUX_GT   &kp HUX_AT     &none
+                &none &trans &trans &trans &trans &trans                                            &kp HUX_TILDE &kp HUX_HASH &kp HUX_LT   &kp HUX_GT   &kp HUX_AT     &none
                                     &trans &trans &trans                                            &trans        &trans       &trans
             >;
         };
