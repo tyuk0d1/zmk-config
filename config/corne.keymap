@@ -63,6 +63,11 @@
             bindings =
                 <&kp A &kp D &kp M &kp HU_DOLLAR &kp P &kp W &kp D &kp HU_DOLLAR &kp HU_N4 &kp HU_DOLLAR &kp M &kp E &kp D>;
         )
+        ZMK_MACRO(
+            macro_tc,
+            bindings =
+                <&kp LWIN &kp T &kp O &kp T &kp A &kp L &kp RET &kp TAB &kp TAB &kp RET>;
+        )
     };
 
     keymap {
@@ -98,8 +103,8 @@
         sym_layer {
             bindings = <
                 &none &trans &trans &trans &trans &trans                                            &kp HU_AMPS  &kp HU_PIPE &kp HU_LBKT &kp HU_RBKT &kp HU_EURO   &none
-                &none &trans &trans &trans &trans &trans                                            &kp HU_SLASH &kp HU_SEMI &kp HU_LBRC &kp HU_RBRC &kp HU_DOLLAR &none
-                &none &trans &trans &trans &trans &trans                                            &kp HU_TILDE &kp HU_HASH &kp HU_LT   &kp HU_GT   &kp HU_AT     &none
+                &none &trans &trans &trans &trans &trans                                            &kp HU_TILDE &kp HU_SEMI &kp HU_LBRC &kp HU_RBRC &kp HU_DOLLAR &none
+                &none &trans &trans &trans &trans &trans                                            &trans       &kp HU_HASH &kp HU_LT   &kp HU_GT   &kp HU_AT     &none
                                     &trans &trans &trans                                            &trans       &trans      &trans
             >;
         };
@@ -107,8 +112,8 @@
          symX_layer {
             bindings = <
                 &none &trans &trans &trans &trans &trans                                            &kp HUX_AMPS  &kp HUX_PIPE &kp HUX_LBKT &kp HUX_RBKT &kp HUX_EURO   &none
-                &none &trans &trans &trans &trans &trans                                            &kp HUX_SLASH &kp HUX_SEMI &kp HUX_LBRC &kp HUX_RBRC &kp HUX_DOLLAR &none
-                &none &trans &trans &trans &trans &trans                                            &kp HUX_TILDE &kp HUX_HASH &kp HUX_LT   &kp HUX_GT   &kp HUX_AT     &none
+                &none &trans &trans &trans &trans &trans                                            &kp HUX_TILDE &kp HUX_SEMI &kp HUX_LBRC &kp HUX_RBRC &kp HUX_DOLLAR &none
+                &none &trans &trans &trans &trans &trans                                            &trans        &kp HUX_HASH &kp HUX_LT   &kp HUX_GT   &kp HUX_AT     &none
                                     &trans &trans &trans                                            &trans        &trans       &trans
             >;
         };
@@ -142,7 +147,7 @@
 
         macro_layer {
             bindings = <
-                &none &trans &trans       &trans &trans &trans                                       &trans &macro_user &trans &trans &macro_pwd &none
+                &none &trans &trans       &trans &trans &macro_tc                                    &trans &macro_user &trans &trans &macro_pwd &none
                 &none &trans &macro_syngo &trans &trans &trans                                       &trans &trans      &trans &trans &trans     &none
                 &none &trans &trans       &trans &trans &trans                                       &trans &macro_mail &trans &trans &trans     &none
                                           &trans &trans &trans                                       &trans &trans      &trans
